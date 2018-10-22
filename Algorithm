@@ -1,0 +1,29 @@
+Purpose of Code --> To calculate the volume and surface area of 3D shapes given certain shapes with specific measurements
+
+Algorithm (Basic design)
+- Create a class for all 3D shapes
+    - parameters for length, width and height
+- Create subclasses for:
+    - prisms
+        - need calculations for volume, surface area
+    - pyramids
+        - need calculations for volume, surface area
+    - spheres
+        - input for length, width, height is not needed
+        - need input for radius
+        - need calculations for volume, surface area
+    - tori
+        - input for length, width, height is not needed
+        - need input for inner and outer radius
+        - need calculations for volume, surface area
+    - cylinders
+        - input for length, width is not needed
+        - need input for radius
+        - need calculations for volume, surface area
+    - cones
+        - input for length, width is not needed
+        - need input for radius
+        - need calculations for volume, surface area
+    - cubes
+        - need calculations for volume, surface area
+        - only one of length, width or height is needed because all three values are equal
