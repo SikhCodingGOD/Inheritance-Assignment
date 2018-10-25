@@ -1,0 +1,40 @@
+package pkg3dshapes;
+
+public class Prism { //main class
+    double length;
+    double width;
+    double height;
+    
+    public Prism() { //default constructor - not needed
+        //length = 0;
+        //width = 0;
+        //height = 0;
+    }
+    
+    public Prism(double l,double w,double h) { //main constructor
+        length = l;
+        width = w;
+        height = h;
+    }
+    
+    public double getVolume() { //helper method
+        return length*width*height;
+    }
+    
+    public double getSurfaceArea() { //helper method
+        return 2*(width*length + height*length + height*width);
+    }
+    
+    public void displayProperties() {
+        System.out.println("The volume is " + getVolume() + " cm^3.\n"
+                + "The surface area is " + getSurfaceArea() + " cm^3.");
+    }
+    
+    public static void main(String[] args) {
+        Prism rect = new Prism(3,4,5);
+        rect.displayProperties();
+        
+        SquarePyramid pyra = new SquarePyramid(5,6);
+        pyra.displayProperties();
+    }
+}
