@@ -1,0 +1,13 @@
+package pkg3dshapes;
+
+public class Sphere {
+    double radius;
+    
+    public Sphere(double r) {
+        radius = r;
+    }
+    
+    public double getVolume() {
+        return 4*Math.PI*Math.pow(radius, 3)/3;
+    }
+}
