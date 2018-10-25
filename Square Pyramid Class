@@ -1,0 +1,20 @@
+package pkg3dshapes;
+
+public class SquarePyramid extends Prism {
+    double side;
+    
+    public SquarePyramid(double s,double h) {
+        side = s;
+        height = h;
+    }
+    
+    @Override
+    public double getVolume() {
+        return side*side*height/3;
+    }
+    
+    @Override
+    public double getSurfaceArea() {
+        return side*side+(2*side*Math.sqrt(side*side/4+height*height));
+    }
+}
