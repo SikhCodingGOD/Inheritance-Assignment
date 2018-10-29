@@ -1,13 +1,19 @@
 package pkg3dshapes;
 
-public class Sphere {
+public class Sphere extends Prism {
     double radius;
     
     public Sphere(double r) {
         radius = r;
     }
     
+    @Override
     public double getVolume() {
         return 4*Math.PI*Math.pow(radius, 3)/3;
+    }
+    
+    @Override
+    public double getSurfaceArea() {
+        return 4*Math.PI*radius*radius;
     }
 }
