@@ -27,7 +27,7 @@ public class Prism { //main class
     
     public void displayProperties() {
         System.out.println("The volume is " + getVolume() + " cm^3.\n"
-                + "The surface area is " + getSurfaceArea() + " cm^3.");
+                + "The surface area is " + getSurfaceArea() + " cm^2.");
     }
     
     public static void main(String[] args) {
@@ -36,5 +36,8 @@ public class Prism { //main class
         
         SquarePyramid pyra = new SquarePyramid(5,6);
         pyra.displayProperties();
+        
+        Sphere circ = new Sphere(11);
+        circ.displayProperties();
     }
 }
