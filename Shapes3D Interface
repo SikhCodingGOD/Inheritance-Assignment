@@ -1,0 +1,5 @@
+package pkg3dshapes;
+
+public interface Shapes3D {
+    public void displayProperties();
+}
