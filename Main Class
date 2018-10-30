@@ -1,6 +1,6 @@
 package pkg3dshapes;
 
-public class Prism { //main class
+public class Prism implements Shapes3D { //main class
     double length;
     double width;
     double height;
@@ -25,6 +25,7 @@ public class Prism { //main class
         return 2*(width*length + height*length + height*width);
     }
     
+    @Override
     public void displayProperties() {
         System.out.println("The volume is " + getVolume() + " cm^3.\n"
                 + "The surface area is " + getSurfaceArea() + " cm^2.");
@@ -39,5 +40,8 @@ public class Prism { //main class
         
         Sphere circ = new Sphere(11);
         circ.displayProperties();
+        
+        Cylinder cyl = new Cylinder(4,6);
+        cyl.displayProperties();
     }
 }
