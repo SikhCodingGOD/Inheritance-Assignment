@@ -8,6 +8,10 @@ public class Cylinder extends Prism {
         height = h;
     }
     
+    private double getArea() { //helper method
+        return Math.PI*radius*radius;
+    }
+    
     @Override
     public double getVolume() {
         return Math.PI*radius*radius*height;
@@ -15,6 +19,6 @@ public class Cylinder extends Prism {
     
     @Override
     public double getSurfaceArea() {
-        return (2*Math.PI*radius*height)+(2*Math.PI*radius*radius);
+        return (2*Math.PI*radius*height)+(2*getArea());
     }
 }
