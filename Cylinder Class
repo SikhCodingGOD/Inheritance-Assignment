@@ -1,0 +1,20 @@
+package pkg3dshapes;
+
+public class Cylinder extends Prism {
+    double radius;
+    
+    public Cylinder(double r,double h) {
+        radius = r;
+        height = h;
+    }
+    
+    @Override
+    public double getVolume() {
+        return Math.PI*radius*radius*height;
+    }
+    
+    @Override
+    public double getSurfaceArea() {
+        return (2*Math.PI*radius*height)+(2*Math.PI*radius*radius);
+    }
+}
