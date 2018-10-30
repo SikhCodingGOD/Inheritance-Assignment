@@ -1,0 +1,7 @@
+Pseudocode for the methods:
+
+Prism:
+- calculate volume - length x width x height
+- calculate surface area - 2 x (width x length + height x length + height x width)
+- display answers
+
