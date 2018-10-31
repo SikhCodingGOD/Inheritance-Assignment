@@ -3,12 +3,50 @@ Pseudocode for the methods within each class:
 Prism:
 - calculate volume
   - get user input for length, width and height
-  - all values must be positive doubles
+  - all values must be positive
   - length x width x height = volume
 - calculate surface area
   - get user input for length, width, height
-  - all  values must be positive doubles
+  - all  values must be positive
   - 2 x (width x length + height x length + height x width) = surface area
-- display answers
+- display answers (all subclasses inherit this method)
   - print out a statement to the user which includes the values for volume and surface area
-
+ 
+Square Pyramid (subclass of Prism):
+- calculate volume (override superclass)
+  - get user input for side length and height
+  - all values must be positive
+  - side^2 x height / 3 = volume
+- calculate surface area (override superclass)
+  - get user input for side length and height
+  - all values must be positive
+  - side^2 + 2 x side x Square root of (side^2 / 4 + height^2) = surface area
+  
+Sphere (subclass of Prism):
+- calculate volume (override superclass)
+  - get user input for radius
+  - value must be positive
+  - 4 x pi x radius^3 /3 = volume
+- calculate surface area (override superclass)
+  - get user input for radius
+  - value must be positive
+  - 4 x pi x radius^2 = surface area
+  
+Cylinder (subclass of Prism):
+- calculate volume (override superclass)
+  - get user input for radius and height
+  - all values must be positive
+  - pi x radius^2 x height = volume
+- calculate surface area (override superclass)
+  - get user input for radius and height
+  - all values must be positive
+  - 2 x pi x radius x height + 2 x pi x radius^2
+  
+  Main method:
+  - get user input for what shape to enter values for (use switch statement)
+    - 1 - Prism class
+    - 2 - Square Pyramid class
+    - 3 - Sphere Class
+    - 4 - Cylinder Class
+  - have the user input values depending on what shape they are trying to calculate the volume and surface area for
+  - call the 'display answers' method to output the volume and surface area of the shape to the user
