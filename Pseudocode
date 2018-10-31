@@ -1,7 +1,14 @@
-Pseudocode for the methods:
+Pseudocode for the methods within each class:
 
 Prism:
-- calculate volume - length x width x height
-- calculate surface area - 2 x (width x length + height x length + height x width)
+- calculate volume
+  - get user input for length, width and height
+  - all values must be positive doubles
+  - length x width x height = volume
+- calculate surface area
+  - get user input for length, width, height
+  - all  values must be positive doubles
+  - 2 x (width x length + height x length + height x width) = surface area
 - display answers
+  - print out a statement to the user which includes the values for volume and surface area
 
