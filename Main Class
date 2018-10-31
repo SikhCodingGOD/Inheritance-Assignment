@@ -32,16 +32,69 @@ public class Prism implements Shapes3D { //main class
     }
     
     public static void main(String[] args) {
-        Prism rect = new Prism(3,4,5);
-        rect.displayProperties();
+        Scanner input = new Scanner(System.in);
         
-        SquarePyramid pyra = new SquarePyramid(5,6);
-        pyra.displayProperties();
+        System.out.println("What shape would you like to calculate values for?\n"
+                + "1 - Square or Rectangular Prism or Cube\n"
+                + "2 - Square Pyramid\n"
+                + "3 - Cylinder\n"
+                + "4 - Sphere");
         
-        Sphere circ = new Sphere(11);
-        circ.displayProperties();
+        int choice;
         
-        Cylinder cyl = new Cylinder(4,6);
-        cyl.displayProperties();
+        while (true) {
+            try {
+                choice = input.nextInt();
+                if (choice != 1 && choice != 2 && choice != 3 && choice != 4) {
+                    System.out.println("The integer must be between 1 and 4!");
+                    continue;
+                }
+                break;
+            }
+            catch (InputMismatchException invalid_input) {
+                input.next();
+                System.out.println("Please enter an INTEGER between 1 and 4.");
+            }
+        }
+        
+        switch (choice) {
+            case 1:
+                System.out.println("\nEnter the length:");
+                double length = input.nextDouble();
+                System.out.println("Enter the width:");
+                double width = input.nextDouble();
+                System.out.println("Enter the height:");
+                double height1 = input.nextDouble();
+                Shapes3D prism = new Prism(length,width,height1);
+                prism.displayProperties();
+                break;
+            
+            case 2:
+                System.out.println("\nEnter the side length:");
+                double side = input.nextDouble();
+                System.out.println("Enter the height:");
+                double height2 = input.nextDouble();
+                SquarePyramid pyramid = new SquarePyramid(side,height2);
+                pyramid.displayProperties();
+                break;
+            
+            case 3:
+                System.out.println("\nEnter the radius:");
+                double radius3 = input.nextDouble();
+                System.out.println("Enter the height:");
+                double height3 = input.nextDouble();
+                Cylinder cylinder = new Cylinder(radius3,height3);
+                cylinder.displayProperties();
+                break;
+                
+            case 4:
+                System.out.println("\nEnter the radius:");
+                double radius4 = input.nextDouble();
+                Sphere sphere = new Sphere(radius4);
+                sphere.displayProperties();
+                break;
+                
+            default:
+                System.out.println("");
     }
 }
