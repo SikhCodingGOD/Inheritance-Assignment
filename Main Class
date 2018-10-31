@@ -1,4 +1,6 @@
 package pkg3dshapes;
+import java.util.Scanner;
+import java.util.InputMismatchException;
 
 public class Prism implements Shapes3D { //main class
     double length;
@@ -60,41 +62,154 @@ public class Prism implements Shapes3D { //main class
         switch (choice) {
             case 1:
                 System.out.println("\nEnter the length:");
-                double length = input.nextDouble();
+                double length;
+                while (true) {
+                    try {
+                        length = input.nextDouble();
+                        if (length <= 0) {
+                            System.out.println("The value cannot be zero or below.");
+                            continue;
+                        }
+                        break;
+                    }
+                    catch (InputMismatchException invalid_input) {
+                        input.next();
+                        System.out.println("Please enter a double!");
+                    }
+                }
                 System.out.println("Enter the width:");
-                double width = input.nextDouble();
+                double width;
+                while (true) {
+                    try {
+                        width = input.nextDouble();
+                        if (width <= 0) {
+                            System.out.println("The value cannot be zero or below.");
+                            continue;
+                        }
+                        break;
+                    }
+                    catch (InputMismatchException invalid_input) {
+                        input.next();
+                        System.out.println("Please enter a double!");
+                    }
+                }
                 System.out.println("Enter the height:");
-                double height1 = input.nextDouble();
+                double height1;
+                while (true) {
+                    try {
+                        height1 = input.nextDouble();
+                        if (height1 <= 0) {
+                            System.out.println("The value cannot be zero or below.");
+                            continue;
+                        }
+                        break;
+                    }
+                    catch (InputMismatchException invalid_input) {
+                        input.next();
+                        System.out.println("Please enter a double!");
+                    }
+                }
                 Shapes3D prism = new Prism(length,width,height1);
                 prism.displayProperties();
                 break;
             
             case 2:
                 System.out.println("\nEnter the side length:");
-                double side = input.nextDouble();
+                double side;
+                while (true) {
+                    try {
+                        side = input.nextDouble();
+                        if (side <= 0) {
+                            System.out.println("The value cannot be zero or below.");
+                            continue;
+                        }
+                        break;
+                    }
+                    catch (InputMismatchException invalid_input) {
+                        input.next();
+                        System.out.println("Please enter a double!");
+                    }
+                }
                 System.out.println("Enter the height:");
-                double height2 = input.nextDouble();
+                double height2;
+                while (true) {
+                    try {
+                        height2 = input.nextDouble();
+                        if (height2 <= 0) {
+                            System.out.println("The value cannot be zero or below.");
+                            continue;
+                        }
+                        break;
+                    }
+                    catch (InputMismatchException invalid_input) {
+                        input.next();
+                        System.out.println("Please enter a double!");
+                    }
+                }
                 SquarePyramid pyramid = new SquarePyramid(side,height2);
                 pyramid.displayProperties();
                 break;
             
             case 3:
                 System.out.println("\nEnter the radius:");
-                double radius3 = input.nextDouble();
+                double radius3;
+                while (true) {
+                    try {
+                        radius3 = input.nextDouble();
+                        if (radius3 <= 0) {
+                            System.out.println("The value cannot be zero or below.");
+                            continue;
+                        }
+                        break;
+                    }
+                    catch (InputMismatchException invalid_input) {
+                        input.next();
+                        System.out.println("Please enter a double!");
+                    }
+                }
                 System.out.println("Enter the height:");
-                double height3 = input.nextDouble();
+                double height3;
+                while (true) {
+                    try {
+                        height3 = input.nextDouble();
+                        if (height3 <= 0) {
+                            System.out.println("The value cannot be zero or below.");
+                            continue;
+                        }
+                        break;
+                    }
+                    catch (InputMismatchException invalid_input) {
+                        input.next();
+                        System.out.println("Please enter a double!");
+                    }
+                }
                 Cylinder cylinder = new Cylinder(radius3,height3);
                 cylinder.displayProperties();
                 break;
                 
             case 4:
                 System.out.println("\nEnter the radius:");
-                double radius4 = input.nextDouble();
+                double radius4;
+                while (true) {
+                    try {
+                        radius4 = input.nextDouble();
+                        if (radius4 <= 0) {
+                            System.out.println("The value cannot be zero or below.");
+                            continue;
+                        }
+                        break;
+                    }
+                    catch (InputMismatchException invalid_input) {
+                        input.next();
+                        System.out.println("Please enter a double!");
+                    }
+                }
                 Sphere sphere = new Sphere(radius4);
                 sphere.displayProperties();
                 break;
                 
             default:
-                System.out.println("");
+                break; //default will never occur as the var 'choice' will always be between 1 and 4
+        }
     }
 }
